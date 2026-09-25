@@ -11,7 +11,7 @@ PreNAV is read-only analytics for wallets holding PreStocks
 
 - **Screener** — every PreStock's DEX price vs. NAV mark price, premium/discount,
   implied vs. mark valuation, liquidity, volume, holders.
-- **Token page** — premium history (5-minute sampler), a Token-2022
+- **Token page** — premium history (5-minute sampler), a
   **Token-2022 safety sheet** (transfer fee, permanent delegate, freeze/mint
   authority, transfer hook, scaled-UI multiplier, confidential transfer,
   pausable), DEX pool fragmentation with price dispersion, plus holders/volume
@@ -26,6 +26,7 @@ bundled snapshot. No paid keys, wallet connection or transactions are needed.
 ## Live
 
 - Frontend demo: https://dist-oxrjakkt.devinapps.com
+- Demo video: https://dist-oxrjakkt.devinapps.com/prenav_demo.mp4
 - The hosted demo can use a bundled snapshot; deploy the backend for live API data.
 
 ## Screenshots
