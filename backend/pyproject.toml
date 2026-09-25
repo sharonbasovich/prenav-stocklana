@@ -1,0 +1,41 @@
+[project]
+name = "prenav-backend"
+version = "0.1.0"
+description = "PreNAV - NAV-premium terminal for PreStocks (tokenized pre-IPO stocks on Solana)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "httpx>=0.27",
+    "apscheduler>=3.10,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = ["-m", "not live"]
+markers = [
+    "live: tests that hit real external endpoints",
+]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 130
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC", "W"]
