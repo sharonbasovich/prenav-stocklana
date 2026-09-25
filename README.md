@@ -6,12 +6,12 @@ Closed-end funds have had discount/premium-to-NAV screens for decades. Tokenized
 pre-IPO SPV tokens have the exact same structure — a token trading on DEXes vs.
 the issuer's mark price of the shares backing it — and no product surfaces it.
 
-PreNAV is read-only analytics for the ~250k wallets holding PreStocks
+PreNAV is read-only analytics for wallets holding PreStocks
 (ANTHROPIC, OPENAI, SPACEX, NEURALINK, ANDURIL, KALSHI, POLYMARKET, FIGUREAI):
 
 - **Screener** — every PreStock's DEX price vs. NAV mark price, premium/discount,
   implied vs. mark valuation, liquidity, volume, holders.
-- **Token page** — premium history (5-minute sampler), a live-decoded
+- **Token page** — premium history (5-minute sampler), a Token-2022
   **Token-2022 safety sheet** (transfer fee, permanent delegate, freeze/mint
   authority, transfer hook, scaled-UI multiplier, confidential transfer,
   pausable), DEX pool fragmentation with price dispersion, plus holders/volume
@@ -120,19 +120,20 @@ Read-only project: no swaps, no signing, no transactions. Not financial advice.
 
 ## Hackathon submission
 
-**What it is:** PreNAV — a read-only NAV-premium terminal for the ~250k wallets
+**What it is:** PreNAV — a read-only NAV-premium terminal for wallets
 holding PreStocks (tokenized pre-IPO stocks on Solana). Closed-end funds have
 had premium/discount-to-NAV screens for decades; pre-IPO SPV tokens have the
 exact same structure and nobody surfaces it.
 
-**Right now on PreNAV:** OPENAI trades ~+32% above its issuer's mark, SPACEX
-~-20% below it, and every transfer pays a 1% Token-2022 fee to the issuer —
-with a permanent delegate able to move your tokens. Holders couldn't see any
-of this.
+**What you can inspect:** each token's market price against its issuer's mark,
+plus Token-2022 transfer fees and authority flags. Figures change with market
+data and snapshot age; the hosted demo's values are illustrative and may differ
+from a current live quote.
 
-**On-chain:** all premium math, fees, delegate/authority flags, and portfolio
-balances are decoded live from mainnet mints and DEX pools — keyless, no
-wallet connect, nothing moves money.
+**Data sources:** the backend can query live Solana mainnet and DEX sources;
+the hosted static demo combines a bundled snapshot with live requests. The
+figures are estimates, with freshness depending on the source. No wallet
+connection or transaction is required.
 
 **Tracks:** Main + PreStocks.
 
